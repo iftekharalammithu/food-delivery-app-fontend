@@ -17,3 +17,43 @@
   font-size: 18px;
   cursor: pointer;
 }
+.navbar-right {
+  border: var(--border-style);
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+.navbar-button {
+  background: transparent;
+  padding: 10px 30px;
+  font-size: 16px;
+  border-radius: 50px;
+  cursor: pointer;
+  color: gray;
+  border: 1px solid tomato;
+  transition: 0.3s;
+}
+.navbar-button:hover {
+  background-color: rgb(241, 232, 232);
+}
+.active {
+  padding-bottom: 2px;
+  border-bottom: 2px solid gray;
+}
+.navbar-menu li {
+  cursor: pointer;
+}
+.navbar-basket-icon {
+  position: relative;
+  border: var(--border-style);
+}
+
+.dot {
+  min-width: 10px;
+  background-color: tomato;
+  position: absolute;
+  min-height: 10px;
+  border-radius: 5px;
+  top: -8px;
+  right: -8px;
+}
