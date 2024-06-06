@@ -7,7 +7,7 @@
   border: var(--border-style);
 }
 .header-container {
-  border: var(--border-style);
+  /* border: var(--border-style); */
   flex-direction: column;
   position: absolute;
   display: flex;
@@ -35,4 +35,23 @@
   background-color: white;
   padding: 1vw 2.3vw;
   font-size: max(1vw, 13px);
+}
+
+@media (max-width: 1050px) {
+  .header-container {
+    /* border: var(--border-style); */
+    max-width: 45%;
+  }
+}
+@media (max-width: 750px) {
+  .header-container {
+    /* border: var(--border-style); */
+    max-width: 55%;
+  }
+  .header-container p {
+    display: none;
+  }
+  .header-container button {
+    padding: 2vw 4vw;
+  }
 }
