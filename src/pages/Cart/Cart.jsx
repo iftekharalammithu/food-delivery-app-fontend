@@ -1,9 +1,12 @@
 import React, { useContext } from "react";
 import "./Cart.css";
 import { Storecontext } from "../../Context/Storecontext";
+import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
-  const { cartitem, food_list, removecartitem } = useContext(Storecontext);
+  const { cartitem, food_list, removecartitem, gettotalcartamount } =
+    useContext(Storecontext);
+  const ordernavigate = useNavigate();
   return (
     <div className="cart">
       <div className="cart-item">
@@ -36,6 +39,39 @@ const Cart = () => {
             );
           }
         })}
+      </div>
+      <div className="cart-bottom">
+        <div className="cart-total">
+          <h2>Cart Totals</h2>
+          <div>
+            <div className="cart-total-details">
+              <p>Subtotal</p>
+              <p>${gettotalcartamount()}</p>
+            </div>
+            <hr />
+            <div className="cart-total-details">
+              <p>Delivery Fee</p>
+              <p>${gettotalcartamount() > 0 ? 2 : 0}</p>
+            </div>
+            <hr />
+            <div className="cart-total-details">
+              <b>Total</b>
+              <b>${gettotalcartamount() > 0 ? gettotalcartamount() + 2 : 0}</b>
+            </div>
+          </div>
+          <button onClick={() => ordernavigate("/order")}>
+            Proceed To ChackOut
+          </button>
+        </div>
+        <div className="cart-promocode">
+          <div>
+            <p>If You have a promo code, Enter it here</p>
+            <div className="cart-promocode-input">
+              <input type="text" placeholder="Promo Code" />
+              <button>Submit</button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

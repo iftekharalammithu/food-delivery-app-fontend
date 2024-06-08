@@ -21,8 +21,8 @@ const App = () => {
         <Navbar setshowlogin={setshowlogin}></Navbar>
         <Routes>
           <Route path="/" element={<Home></Home>}></Route>
-          <Route path="cart" element={<Cart></Cart>}></Route>
-          <Route path="order" element={<Placeorder></Placeorder>}></Route>
+          <Route path="/cart" element={<Cart></Cart>}></Route>
+          <Route path="/order" element={<Placeorder></Placeorder>}></Route>
         </Routes>
       </div>
       <Footer></Footer>
