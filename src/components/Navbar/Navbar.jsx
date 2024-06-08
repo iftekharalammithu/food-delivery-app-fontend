@@ -7,7 +7,9 @@ const Navbar = ({ setshowlogin }) => {
   const [menu, setmenu] = useState("");
   return (
     <div className="navbar">
-      <img className="logo-img" src={assets.logo} alt="Logo" />
+      <Link to="/">
+        <img className="logo-img" src={assets.logo} alt="Logo" />
+      </Link>
       <ul className="navbar-menu">
         <Link
           to={"/"}
@@ -41,7 +43,9 @@ const Navbar = ({ setshowlogin }) => {
       <div className="navbar-right">
         <img src={assets.search_icon} alt="" />
         <div className="navbar-basket-icon">
-          <img src={assets.basket_icon} alt="" />
+          <Link to="/cart">
+            <img src={assets.basket_icon} alt="" />
+          </Link>
           <div className="dot"></div>
         </div>
         <button onClick={() => setshowlogin(true)} className="navbar-button">

@@ -1,0 +1,28 @@
+.cart {
+  /* border: var(--border-style); */
+  margin-top: 100px;
+}
+.cart-item-title {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr 0.5fr;
+  /* border: var(--border-style); */
+  align-items: center;
+  font-size: max(1vw, 12px);
+  color: gray;
+}
+.cart-item-item {
+  /* border: var(--border-style); */
+  margin: 10px 0;
+  color: black;
+}
+.cart-item-item img {
+  width: 50px;
+}
+.cart hr {
+  border: none;
+  height: 1px;
+  background-color: rgb(212, 210, 205);
+}
+.cross {
+  cursor: pointer;
+}
