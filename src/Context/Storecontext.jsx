@@ -5,6 +5,8 @@ export const Storecontext = createContext(null);
 
 const Storecontextprovider = (props) => {
   const [cartitem, setcartitem] = useState({});
+  const [token, settoken] = useState("");
+  const url = "http://localhost:4000/";
 
   const addtocart = (itemID) => {
     if (!cartitem[itemID]) {
@@ -20,7 +22,6 @@ const Storecontextprovider = (props) => {
 
   const gettotalcartamount = () => {
     let totalamount = 0;
-    console.log(cartitem);
     for (const item in cartitem) {
       if (cartitem[item] > 0) {
         let iteminfo = food_list.find((product) => product._id === item);
@@ -37,6 +38,9 @@ const Storecontextprovider = (props) => {
     addtocart,
     removecartitem,
     gettotalcartamount,
+    url,
+    token,
+    settoken,
   };
 
   return (
