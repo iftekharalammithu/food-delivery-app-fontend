@@ -2,7 +2,7 @@
 
 A ReactJS application for ordering food online and getting it delivered to your doorstep.
 
-![Food Delivery App Screenshot](src\frontend_assets\homepage.png)
+![Food Delivery App Screenshot](src/frontend_assets/homepage.png)
 
 ## Getting Started
 
